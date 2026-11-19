@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  UNTUK PEMULA: BACA INI DULU
+  ------------------------------------------------------------
+  Tanda di file ini:
+    [BOLEH UBAH]  = silakan ganti isinya (teks, foto, nama, warna)
+    [JANGAN UBAH] = bagian penting, biarkan seperti adanya
+
+  Kalau bingung, cukup ubah yang bertanda [BOLEH UBAH] saja.
+  ============================================================
+-->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- [JANGAN UBAH] koneksi internet untuk ikon & font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap">
+
+  <!-- [JANGAN UBAH] tampilan (CSS) diambil dari file style.css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- [BOLEH UBAH] judul yang muncul di tab browser -->
+  <title>Ucapan untuk Bu Guru</title>
+
+  <!-- ============================================================
+       [BOLEH UBAH] WARNA HALAMAN
+       Ganti kode warna di bawah (#ffe6f0) dengan warna lain.
+       Contoh warna ungu: #e6ccff
+       ============================================================ -->
+  <style>
+    :root {
+      --bg-1: #ffe6f0;      /* warna latar 1 */
+      --bg-2: #fff0f5;      /* warna latar 2 */
+      --accent-1: #ff66c4;  /* warna tombol 1 */
+      --accent-2: #ff3399;  /* warna tombol 2 */
+      --accent-rgb: 255, 102, 196;  /* warna sama seperti accent-1, dipakai untuk bayangan */
+      --heading: #d63384;   /* warna judul */
+      --tint: #ffe6f0;      /* warna garis tepi kartu */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       HALAMAN 1 — sambutan
+       ============================================================ -->
+  <div id="page1" class="page active">
+
+    <!-- [BOLEH UBAH] kalimat sambutan -->
+    <h2>Selamat Hari Guru, aku ada sedikit ucapan untuk ibu... <span class="material-symbols-outlined h2-ico" aria-hidden="true">favorite</span></h2>
+
+    <!-- [JANGAN UBAH] tombol pindah halaman (onclick harus tetap nextPage) -->
+    <button class="btn" onclick="nextPage()">Lanjut <span class="material-symbols-outlined btn-icon" aria-hidden="true">arrow_forward</span></button>
+  </div>
+
+  <!-- ============================================================
+       HALAMAN 2 — hadiah & kartu ucapan
+       ============================================================ -->
+  <div id="page2" class="page">
+
+    <!-- [BOLEH UBAH] judul halaman hadiah -->
+    <h2>Klik hadiahnya ya!</h2>
+
+    <!-- [JANGAN UBAH] tombol buka hadiah (onclick harus tetap showUcapan) -->
+    <button class="gift-btn" type="button" aria-label="Buka hadiah" onclick="showUcapan()">
+      <span class="material-symbols-outlined" aria-hidden="true">redeem</span>
+    </button>
+
+    <div id="ucapan" class="ucapan">
+      <!-- KARTU ALA INSTAGRAM: foto di kiri, ucapannya di kanan -->
+      <div class="ig-card">
+
+        <!-- ---------- FOTO GURU ---------- -->
+        <div class="ig-foto">
+          <!-- [BOLEH UBAH] ganti foto-bu-guru.jpg dengan nama file fotomu.
+               Syarat: file foto harus ada di folder yang sama, dan namanya jangan ada spasi.
+               Foto bebas potrait / landscape / kotak — TIDAK PERLU DIPOTONG MANUAL,
+               CSS akan menyesuaikan & memotongnya sendiri (tidak akan melar). -->
+          <img src="foto_guru.jpeg" alt="Foto Bu Guru" onerror="this.remove()">
+
+          <!-- [BOLEH UBAH] tulisan yang muncul kalau foto belum ada -->
+          <div class="foto-ph">
+            <span class="material-symbols-outlined ph-icon" aria-hidden="true">school</span>
+            <small>Foto Bu Guru</small>
+          </div>
+        </div>
+
+        <!-- ---------- SISI KANAN (nama & ucapan) ---------- -->
+        <div class="ig-side">
+
+          <!-- nama akun -->
+          <div class="ig-header">
+            <div class="ig-avatar"><span class="material-symbols-outlined" aria-hidden="true">person</span></div>
+            <div class="ig-user">
+              <!-- [BOLEH UBAH] nama guru -->
+              <div class="ig-name">Bu Putri <span class="material-symbols-outlined ig-badge" aria-hidden="true">check</span></div>
+              <!-- [BOLEH UBAH] username -->
+              <div class="ig-handle">@bu.putri</div>
+            </div>
+            <div class="ig-dots material-symbols-outlined" aria-hidden="true">more_horiz</div>
+          </div>
+
+          <!-- ============================================================
+               [BOLEH UBAH] ISI UCAPAN — ganti teks di bawah ini sesuai hatimu.
+               Panduan:
+                 <br><br>  = pindah baris (paragraf baru)
+                 <b> ... </b> = teks tebal
+                 🙏 🌸        = emoji boleh ditambah
+               ============================================================ -->
+          <div class="ig-caption">
+            <b>Bu Putri</b><br><br>
+            Selamat Hari Guru Nasional untuk Bu Putri Permatasari, S.Pd<br><br>
+            Terima kasih banyak Bu, sudah selalu sabar mengajar dan membimbing kami di kelas matematika.<br><br>
+            Mata pelajaran ini memang sering terasa berat, tetapi cara ibu mengajarkan dan menjelaskan materi yang sabar, jelas, dan asik justru membuat setiap materi terasa masuk akal dan seru untuk dipecahkan
+            dari setiap soal yang dibahas di kelas, saya tidak hanya belajar logika berhitung, tetapi juga belajar bahwa sesulit apapun masalahnya pasti ada jalan keluarnya selama kita mau mencoba.<br><br>
+            Saya selalu mengapresiasi bagaimana ibu menjelaskan materi langkah demi langkah hingga saya benar-benar paham, tanpa pernah membuat saya ragu untuk bertanya.🌸<br><br>
+
+            <!-- [BOLEH UBAH] ganti "nama kamu" dengan namamu -->
+            <span class="ig-sign">– <i>Himam</i></span>
+          </div>
+
+          <!-- [JANGAN UBAH] ikon tombol seperti Instagram -->
+          <div class="ig-actions">
+            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+            <span class="material-symbols-outlined" aria-hidden="true">chat_bubble</span>
+            <span class="material-symbols-outlined" aria-hidden="true">send</span>
+            <span class="material-symbols-outlined ig-bookmark" aria-hidden="true">bookmark</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- [JANGAN UBAH] tombol lanjut ke halaman terima kasih -->
+      <div style="text-align: center;">
+        <button class="btn" onclick="showThanks()">Lanjut <span class="material-symbols-outlined btn-icon" aria-hidden="true">arrow_forward</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HALAMAN 3 — terima kasih
+       ============================================================ -->
+  <div id="page3" class="page">
+    <h2>Terima kasih... <span class="material-symbols-outlined h2-ico" aria-hidden="true">mail</span></h2>
+    <div class="thanks">
+      <!-- [BOLEH UBAH] kalimat penutup -->
+      <p>Sekali lagi, selamat Hari Guru, Bu Putri. Terima kasih banyak atas semua ilmu dan kesabarannya mengajar selama ini, Sehat dan sukses selalu ya Bu!</p>
+      <!-- [JANGAN UBAH] tombol kembali (onclick harus tetap goHome) -->
+      <button class="btn" onclick="goHome()"><span class="material-symbols-outlined btn-icon" aria-hidden="true">home</span> Kembali ke Awal</button>
+    </div>
+  </div>
+
+  <!-- [JANGAN UBAH] JavaScript pengendali halaman ada di file script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
